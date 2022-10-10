@@ -1,0 +1,12 @@
+import pandas as pd
+df = pd.read_csv(r'C:\Users\sheth\OneDrive\Desktop\train.csv')
+df
+df.isnull()
+df.loc[:,['Age','Cabin']].isnull().any(axis='columns') 
+bool_series = pd.isnull(df["Embarked"])
+df[bool_series]
+df['Embarked'].value_counts().idxmax()
+new = df.replace({'Embarked': 61, 'Embarked': 829}, 'S')
+new
+bool_series = pd.isnull(new["Embarked"])
+new[bool_series]
