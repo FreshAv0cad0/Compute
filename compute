@@ -10,6 +10,8 @@ new = df.replace({'Embarked': 61, 'Embarked': 829}, 'S')
 new
 bool_series = pd.isnull(new["Embarked"])
 new[bool_series]
+********************************************************************************************
+COMPETITIVE TASKS:-
 
 Q1}
 #include <stdio.h>
