@@ -10,3 +10,95 @@ new = df.replace({'Embarked': 61, 'Embarked': 829}, 'S')
 new
 bool_series = pd.isnull(new["Embarked"])
 new[bool_series]
+
+Q1}
+#include <stdio.h>
+
+void main()
+{   int a,b,flag = 0;
+    printf("Enter the two ints");
+    scanf("%d %d",&a,&b);
+    while(a%b != 0)
+    {
+    a++;
+    flag++;
+    }
+    printf("%d",flag);
+    
+}
+
+
+#include <stdio.h>
+#include <string.h>
+void main()
+{   int flag;
+    char a[10000];
+    char b[10000];
+    gets(a);
+    gets(b);
+    for(int i = 0;i<strlen(b);i++)
+    {
+        flag = 0;
+        for(int j = 0;j<strlen(a);j++)
+        {
+            
+            if(b[i] != a[j])
+            {
+            flag++;   
+            }
+                    
+                        
+        }
+        
+        if(flag == strlen(a))
+        {
+            printf("%c",b[i]);
+            break;
+        }
+    }
+}
+Q3}
+
+#include <stdio.h>
+
+void main()
+
+{
+    int n,flag =0,temp = 0;
+    printf("Enter n \n");
+    scanf("%d",&n);
+    int a[100],b[100];
+    
+    printf("Enter the elements \n");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(int i=0;i<n;i++)
+    {
+        for(int j = n-1;j>=0;j--)
+        {
+            if(a[i] != a[j])
+             {
+                 flag = 0;
+                 temp = a[i];
+                 a[i] = a[j];
+                 a[j] = temp;
+                 flag++;
+                 
+             }
+             else
+             break;
+        }
+        break;
+    }
+    if(flag == 0)
+    printf("-1");
+    else
+    {
+    for(int i=0;i<n;i++)
+    {
+        printf("%d\n",a[i]);
+    }
+}
+}
